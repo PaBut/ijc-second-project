@@ -51,8 +51,6 @@ void cb_put(circular_buffer* cb, char* line){
     }
 }
 
-
-
 char* cb_get(circular_buffer* cb){
     char* line = cb->array[cb->start_index++];
     cb->start_index %= cb->length;
