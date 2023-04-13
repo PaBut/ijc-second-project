@@ -5,11 +5,12 @@ void htab_clear(htab_t * t){
         return;
     }
     for(size_t i = 0; i < t->size; i++){
-        for(htab_item_t* item = t->arr_ptr[i]; item->next != NULL; item = item->next){
-            htab_item_t* item_to_delete = item;
-            t->arr_ptr[i] = item->next;
+        while(t->arr_ptr[i] != NULL){
+            htab_item_t* item_to_delete = t->arr_ptr[i];
+            t->arr_ptr[i] = t->arr_ptr[i]->next;
             htab_item_free(item_to_delete);
         }
+        
     }
     t->arr_size = 0;
 }
