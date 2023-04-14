@@ -1,7 +1,5 @@
 #include "htab_private.h"
-// #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 
 htab_pair_t * htab_lookup_add(htab_t * t, htab_key_t key){
     htab_pair_t* pair = htab_find(t, key);
@@ -11,8 +9,6 @@ htab_pair_t * htab_lookup_add(htab_t * t, htab_key_t key){
         if(new_item == NULL){
             return NULL;
         }
-        // printf("Done here with %s key\n", key);
-        printf("Index is %lu\n", index);
         htab_item_t* list_item = t->arr_ptr[index];
         if(list_item == NULL){
             t->arr_ptr[index] = new_item;
@@ -24,6 +20,5 @@ htab_pair_t * htab_lookup_add(htab_t * t, htab_key_t key){
         }
         pair = new_item->pair;
     }
-
     return pair;
 }
