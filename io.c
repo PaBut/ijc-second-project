@@ -13,7 +13,7 @@ int read_word(char *s, int max, FILE *f){
     bool warning = false;
 
     while((c = fgetc(f)) != ' ' && c != '\n' && c != EOF){
-        if(index <= max - 2){
+        if(index <= max - 1){
             s[index++] = c;
         }
         else{

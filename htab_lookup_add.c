@@ -16,8 +16,8 @@ htab_pair_t * htab_lookup_add(htab_t * t, htab_key_t key){
         else{
             for(;list_item->next != NULL; list_item = list_item->next);
             list_item->next = new_item;
-            t->arr_size++;
         }
+        t->arr_size++;
         pair = new_item->pair;
     }
     return pair;

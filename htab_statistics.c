@@ -5,10 +5,11 @@
 // #include 
 
 void htab_statistics(const htab_t * t){
-    if(t == NULL || t->arr_ptr == NULL){
+    if(t == NULL || t->arr_ptr == NULL || t->arr_size == 0){
         fprintf(stderr, "Nothing to make statistics from in this hash table\n");
         return;
     }
+    
     size_t* list_length = malloc(t->size * sizeof(size_t));
     if(list_length == NULL){
         fprintf(stderr, "Allocation error\n");

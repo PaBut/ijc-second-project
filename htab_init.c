@@ -4,7 +4,7 @@
 // #include "htab.h"
 
 htab_t *htab_init(const size_t n){
-    struct htab* tab = /*(struct htab*)*/malloc(sizeof(struct htab));
+    struct htab* tab = malloc(sizeof(struct htab));
     if(tab == NULL){
         return NULL;
     }
