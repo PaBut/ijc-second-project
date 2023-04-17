@@ -5,8 +5,6 @@ void htab_free(htab_t * t){
         return;
     }
     htab_clear(t);
-    if(t->arr_ptr != NULL){
-        free(t->arr_ptr);
-    }
+    free(t->arr_ptr);
     free(t);
 }

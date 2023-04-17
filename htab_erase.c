@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 bool htab_erase(htab_t * t, htab_key_t key){
-    size_t index = htab_hash_function(key) % t->size;
+    size_t index = htab_hash_function(key) % t->arr_size;
     if(t->arr_ptr[index] == NULL){
         return false;
     }
@@ -12,16 +12,15 @@ bool htab_erase(htab_t * t, htab_key_t key){
         htab_item_t* item_to_delete = item;
         t->arr_ptr[index] = item_to_delete->next;
         htab_item_free(item_to_delete);
-        t->arr_size--;
+        t->size--;
         return true;
     }
     for(; item->next != NULL; item = item->next){
-        printf("Iterating\n");
         if(!strcmp(item->next->pair->key, key)){
             htab_item_t* item_to_delete = item->next;
             item->next = item_to_delete->next;
             htab_item_free(item_to_delete);
-            t->arr_size--;
+            t->size--;
             return true;
         }
     }
