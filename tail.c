@@ -113,10 +113,13 @@ int main(int argc, char** argv){
         return EXIT_FAILURE;
     }
 
-
+    bool warning = false;
     while(fgets(tmp_line, MAX_LINE_LENGTH + 1, input) != NULL){
         if(strchr(tmp_line, '\n') == NULL && strlen(tmp_line) == MAX_LINE_LENGTH){
-            fprintf(stderr, "Warning: The line is too long. Must have at most 4095 symbols\n");
+            if(!warning){
+                fprintf(stderr, "Warning: The line is too long. Must have at most 4095 symbols\n");
+                warning = true;
+            }
             int tmp_char;
             do{
                 tmp_char = fgetc(input);
