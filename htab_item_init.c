@@ -1,3 +1,10 @@
+// htab_item_init.c
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Implementation of htab_item_init function
+// Creation and initialization of hashtable entry
+
 #include "htab_private.h"
 
 htab_item_t* htab_item_init(htab_key_t key){

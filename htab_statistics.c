@@ -1,3 +1,11 @@
+// htab_statistics.c
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Implementation of htab_statistics function
+// calculates and prints list length
+// statistics (min,max,avg) to stderr
+
 #include "htab_private.h"
 #include <stdio.h>
 

@@ -1,3 +1,11 @@
+// io.c
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Implementation of read_word function
+// reads one word from file into the specified character array
+// returns the length of the word or EOF
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>

@@ -1,3 +1,10 @@
+// htab_find.c
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Implementation of htab_find function
+// for getting entry with specified key
+
 #include "htab_private.h"
 #include <string.h>
 

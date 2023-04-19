@@ -1,3 +1,9 @@
+// htab_private.h
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Structure declaratios of hashtable and its entry
+
 #include <stdint.h>
 #include <stdlib.h>
 #include "htab.h"

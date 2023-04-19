@@ -1,3 +1,10 @@
+// htab_erase.c
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Implementation of htab_erase function
+// for deleting entry with specified key
+
 #include "htab_private.h"
 #include <string.h>
 #include <stdio.h>

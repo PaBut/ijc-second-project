@@ -1,3 +1,10 @@
+// htab_lookup_add.c
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Implementation of htab_lookup_add function
+// Appends an entry if it won't be found based on key
+
 #include "htab_private.h"
 #include <string.h>
 

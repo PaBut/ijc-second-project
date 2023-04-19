@@ -1,3 +1,9 @@
+// wordcount.c
+// IJC-DU2 solution, task 2), 19.04.2023
+// Author: Pavlo Butenko, FIT
+// Compiled with gcc 11.3
+// Prints the number of times words appeared in the text
+
 #include "htab.h"
 #include <stdio.h>
 #include <stdlib.h>
