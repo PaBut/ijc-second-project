@@ -43,6 +43,9 @@ int main(){
     }while(length != EOF);
 
     htab_for_each(tab, &print_count);
+    #ifdef STATISTICS
+    htab_statistics(tab);
+    #endif
     htab_free(tab);
     free(word);
 
