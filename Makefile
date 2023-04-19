@@ -12,6 +12,6 @@ libhtab.a: $(MODULES)
 wordcount: wordcount.c libhtab.a io.c io.h
 	$(CC) $(CFLAGS) -static wordcount.c io.c -o wordcount -L. -lhtab
 wordcount-dynamic: wordcount.o io.o libhtab.so
-	$(CC) -o $@ wordcount.o io.o -L. -lhtab -Wl,-rpath=$(realpath .)
+	$(CC) -o $@ wordcount.o io.o -L. -lhtab
 clean:
 	rm $(MODULES) libhtab.so libhtab.a tail wordcount wordcount-dynamic
