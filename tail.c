@@ -105,6 +105,11 @@ int main(int argc, char** argv){
     
 
     circular_buffer* cb = cb_create(lines);
+    if(cb == NULL){
+        close_file_stream(input);
+        fprintf(stderr, "Failed to allocate memory\n");
+        return EXIT_FAILURE;
+    }
     char* tmp_line = malloc((MAX_LINE_LENGTH + 1) * sizeof(char));
     if(tmp_line == NULL){
         cb_free(cb);
